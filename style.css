@@ -21,6 +21,24 @@
 .word {
 	margin: 0;
 	font-size: 20;
+	font-weight: bold;
+}
+
+@media (max-width: 960px) {
+	.word {
+		font-size: 18;
+	}
+}
+
+@media (max-width: 840px) {
+	.word {
+		font-size: 16;
+	}
+}
+@media (max-width: 720px) {
+	.word {
+		font-size: 14;
+	}
 }
 
 .revealed .word { visibility: hidden; }
