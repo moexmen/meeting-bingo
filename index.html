@@ -1,9 +1,11 @@
 <html>
 <head>
   <title>Codenames</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="style.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="jquery.qrcode.min.js"></script>
   <script src="words.js"></script>
   <script src="generate.js"></script>
 </head>
@@ -141,6 +143,27 @@
       <div class="cell col-xs-2">
         <div class="card">
           <span class="word"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container text-center">
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#spymaster-modal">Spymasters</button>
+  </div>
+  <div class="modal fade" id="spymaster-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Spymasters' Map</h4>
+        </div>
+        <div class="modal-body text-center">
+          <p>Scan the following QR code on your phone</p>
+          <div id="qrcode"></div>
+          <h3>Map code: <span id="spymaster-code"></span></h3>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>

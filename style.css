@@ -1,5 +1,7 @@
 .word-grid {
 	height: 60%;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 .cell {

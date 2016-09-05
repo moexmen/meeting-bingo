@@ -54,16 +54,16 @@ function randomize() {
 		$(this).addClass("revealed");
 	})
 
-	spymasterCode = encodeSpymasterLink()
+	generateSpymasterLink();
 }
 
 function randInt(max) {
 	return Math.floor(Math.random() * max);
 }
 
-function encodeSpymasterLink() {
+function generateSpymasterLink() {
 	var base64chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_";
-	var code = "";
+	spymasterCode = "";
 	var rot = randInt(14);
 	var acc = rot;
 
@@ -72,9 +72,11 @@ function encodeSpymasterLink() {
 		acc = acc << 2;
 		acc += spies[index];
 		if ((i % 3) == 0) {
-			code += base64chars.charAt(acc);
+			spymasterCode += base64chars.charAt(acc);
 			acc = 0;
 		}
 	}
-	return code;
+
+	$("#spymaster-code").html(spymasterCode);
+	$("#qrcode").qrcode("jeremyyap.github.io/codenames/spymaster?" + spymasterCode);
 }
