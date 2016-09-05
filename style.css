@@ -1,0 +1,30 @@
+.word-grid {
+	height: 60%;
+}
+
+.cell {
+	padding: 0px;
+}
+
+.card {
+	border: 1px solid black;
+	border-radius: 5px;
+	height: 19%;
+	margin: 1%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.word {
+	margin: 0;
+	font-size: 20;
+}
+
+.revealed .word { visibility: hidden; }
+.revealed:hover .word { visibility: visible; }
+
+.revealed { background-color: #fc0; }
+.revealed.spy-red { background-color: red; }
+.revealed.spy-blue { background-color: #39f; }
+.revealed.spy-black { background-color: #999; }
