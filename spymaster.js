@@ -1,25 +1,48 @@
-var spies, redSpies, blueSpies;
-var spymasterCode;
-
+var base64chars = "DsAnm2hc6MQIELCvt5paX7OoHFeySNWqi04lURzZb8VkjfK9u_G-YJ1rgBxw3TdP";
 
 $(function() {
-	spies = decodeSpymasterLink();
+	var code = mapCodeFromURL();
+	if (code !== undefined && isValidCode(code)) {
+		$("#map-code").val(code);
+		var spies = decodeMapCode(code);
+		displayMap(spies);
+	}
+});
 
+function displayMap(spies) {
 	$(".card").each(function(index) {
 		var type = spies[index];
 		var className;
+		$(this).removeClass("spy-red spy-blue spy-black");
 		switch (type) {
 			case 1: className = "spy-red"; break;
 			case 2: className = "spy-blue"; break;
 			case 3: className = "spy-black"; break;
 		}
 		$(this).addClass(className);
-	})
-});
+	});
+}
 
-function decodeSpymasterLink() {
-	var base64chars = "DsAnm2hc6MQIELCvt5paX7OoHFeySNWqi04lURzZb8VkjfK9u_G-YJ1rgBxw3TdP";
-	var code = window.location.href.slice(window.location.href.indexOf('?') + 1);
+function mapCodeFromURL() {
+	var index = window.location.href.indexOf('?');
+	var code;
+	if (index !== -1) {
+		code = window.location.href.slice(index + 1);
+	}
+	return code;
+}
+
+function isValidCode(code) {
+	if (code.length !== 9) return false;
+	for (var i=0; i<9; i++) {
+		if (base64chars.indexOf(code.charAt(i)) == -1) {
+			return false;
+		}
+	}
+	return true;
+}
+
+function decodeMapCode(code) {
 	var arr = [];
 	for (var i=0; i<25; i++) { arr[i] = 0; }
 
@@ -33,4 +56,14 @@ function decodeSpymasterLink() {
 		}
 	}
 	return arr;
+}
+
+function generateMap() {
+	var code = $("#map-code").val();
+	if (isValidCode(code)) {
+		var spies = decodeMapCode(code);
+		displayMap(spies);
+	} else {
+		alert("The map code is not valid.");
+	}
 }
