@@ -24,12 +24,15 @@
 	font-weight: bold;
 }
 
+#spymaster-code {
+	font-family: "Times New Roman", Georgia, serif;
+}
+
 @media (max-width: 960px) {
 	.word {
 		font-size: 18;
 	}
 }
-
 @media (max-width: 840px) {
 	.word {
 		font-size: 16;
