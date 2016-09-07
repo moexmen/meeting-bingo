@@ -96,5 +96,6 @@ function generateSpymasterLink() {
 	}
 
 	$("#spymaster-code").html(spymasterCode);
+	$("#qrcode").html("");
 	$("#qrcode").qrcode("jeremyyap.github.io/codenames/spymaster?" + spymasterCode);
 }
