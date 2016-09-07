@@ -3,6 +3,7 @@ var spymasterCode;
 
 $(function() {
 	randomize();
+	displayGame();
 });
 
 function randomize() {
@@ -38,7 +39,9 @@ function randomize() {
 		} while (spies[index] != 0);
 		spies[index] = 2;
 	}
+}
 
+function displayGame() {
 	$(".card").each(function(index) {
 		var type = spies[index];
 		var className;
@@ -47,14 +50,29 @@ function randomize() {
 			case 2: className = "spy-blue"; break;
 			case 3: className = "spy-black"; break;
 		}
+		$(this).removeClass("spy-red spy-blue spy-black");
 		$(this).addClass(className);
 	})
 
 	$(".card").click(function() {
+		if (!$(this).hasClass("revealed")) {
+			$(this).addClass("covered");
+		}
 		$(this).addClass("revealed");
-	})
+	});
 
 	generateSpymasterLink();
+	$('#spymaster-modal').modal('show');
+}
+
+function showAll() {
+	$(".card").addClass("revealed");
+}
+
+function newGame() {
+	$(".card").removeClass("covered revealed");
+	randomize();
+	displayGame();
 }
 
 function randInt(max) {
@@ -64,7 +82,7 @@ function randInt(max) {
 function generateSpymasterLink() {
 	var base64chars = "DsAnm2hc6MQIELCvt5paX7OoHFeySNWqi04lURzZb8VkjfK9u_G-YJ1rgBxw3TdP";
 	spymasterCode = "";
-	var rot = randInt(14);
+	var rot = randInt(14) + 1;
 	var acc = rot;
 
 	for (var i=0; i<25; i++) {

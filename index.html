@@ -148,7 +148,9 @@
     </div>
   </div>
   <div class="container text-center">
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#spymaster-modal">Spymasters</button>
+    <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#spymaster-modal">Spymasters</button>
+    <button type="button" class="btn btn-primary btn-lg" onclick="showAll()">Show All</button>
+    <button type="button" class="btn btn-primary btn-lg" onclick="newGame()">New Game</button>
   </div>
   <div class="modal fade" id="spymaster-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
@@ -159,7 +161,8 @@
         </div>
         <div class="modal-body text-center">
           <p>Scan the following QR code on your phone</p>
-          <div id="qrcode"></div>
+          <div id="qrcode"></div><br/>
+          <p>Or enter the following code at jeremyyap.github.io/codenames/spymaster</p>
           <h3>Map code: <span id="spymaster-code"></span></h3>
         </div>
         <div class="modal-footer">

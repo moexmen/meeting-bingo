@@ -44,8 +44,8 @@
 	}
 }
 
-.revealed .word { visibility: hidden; }
-.revealed:hover .word { visibility: visible; }
+.covered .word { visibility: hidden; }
+.covered:hover .word { visibility: visible; }
 
 .revealed { background-color: #fc0; }
 .revealed.spy-red { background-color: red; }
