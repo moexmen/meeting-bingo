@@ -18,7 +18,7 @@ $(function() {
 });
 
 function decodeSpymasterLink() {
-	var base64chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_";
+	var base64chars = "DsAnm2hc6MQIELCvt5paX7OoHFeySNWqi04lURzZb8VkjfK9u_G-YJ1rgBxw3TdP";
 	var code = window.location.href.slice(window.location.href.indexOf('?') + 1);
 	var arr = [];
 	for (var i=0; i<25; i++) { arr[i] = 0; }

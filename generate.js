@@ -62,7 +62,7 @@ function randInt(max) {
 }
 
 function generateSpymasterLink() {
-	var base64chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_";
+	var base64chars = "DsAnm2hc6MQIELCvt5paX7OoHFeySNWqi04lURzZb8VkjfK9u_G-YJ1rgBxw3TdP";
 	spymasterCode = "";
 	var rot = randInt(14);
 	var acc = rot;
