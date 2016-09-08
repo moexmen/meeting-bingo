@@ -48,6 +48,31 @@
 .covered:hover .word { visibility: visible; }
 
 .revealed { background-color: #fc0; }
-.revealed.spy-red { background-color: red; }
-.revealed.spy-blue { background-color: #39f; }
+.revealed.spy-red, .start-team.spy-red { background-color: red; }
+.revealed.spy-blue, .start-team.spy-blue { background-color: #39f; }
 .revealed.spy-black { background-color: #999; }
+
+/* Spymaster map styles */
+.map {
+	border: 1px solid black;
+	border-radius: 50px;
+	margin: 20px;
+}
+.start-team {
+	border: 1px solid black;
+	border-radius: 5px;
+}
+.start-team-top, .start-team-bottom {
+	margin: auto;
+	height: 20px;
+	max-width: 100px;
+}
+.start-team-left, .start-team-right { 
+	margin: auto;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	height: 19%;
+	width: 20px
+}
+.start-team-top { margin-top: -35px; margin-bottom: 15px; }
+.start-team-bottom { margin-top: 15px; margin-bottom: -35px; }

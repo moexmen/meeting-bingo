@@ -10,17 +10,22 @@ $(function() {
 });
 
 function displayMap(spies) {
+	var redSpyCount = 0, blueSpyCount = 0;
+
 	$(".card").each(function(index) {
 		var type = spies[index];
 		var className;
 		$(this).removeClass("spy-red spy-blue spy-black");
 		switch (type) {
-			case 1: className = "spy-red"; break;
-			case 2: className = "spy-blue"; break;
+			case 1: className = "spy-red"; redSpyCount++; break;
+			case 2: className = "spy-blue"; blueSpyCount++; break;
 			case 3: className = "spy-black"; break;
 		}
 		$(this).addClass(className);
 	});
+
+	startTeamClass = redSpyCount > blueSpyCount ? "spy-red" : "spy-blue";
+	$(".start-team").addClass(startTeamClass);
 }
 
 function mapCodeFromURL() {
