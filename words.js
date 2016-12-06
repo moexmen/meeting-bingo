@@ -9,14 +9,14 @@ var phrases = [
   'Muck around',
   'The important thing in life',
   'Guai guai',
-  'Tamba',
+  'Tambah',
   'Tank',
   'No choice',
   'Means got problem',
   'There\'s the truth and then there\'s the brutal truth',
   'There is vision and then there is reality',
   'These people are not stooopid ok?',
-  '<cluck>',
+  '&lt;cluck&gt;',
   'The general point is',
   'The point is',
   'The thing is that',
@@ -25,9 +25,12 @@ var phrases = [
   'Sai understand?',
   'Stupid or not?',
   'We talk offline',
-  'Dun lidded lah',
   '\u597D\u4E0D\u597D',
+  'Dun liddat lah',
   'You think they hire me because I handsome issit?',
-  'Auntie-killer'
+  'Auntie-killer',
+  'Timeout timeout timeout!',
+  'Jaw drop',
+  'The moral of the story is'
 ];
 
