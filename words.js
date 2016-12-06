@@ -26,7 +26,7 @@ var phrases = [
   'Stupid or not?',
   'We talk offline',
   'Dun lidded lah',
-  '好不好',
+  '\u597D\u4E0D\u597D',
   'You think they hire me because I handsome issit?',
   'Auntie-killer'
 ];
