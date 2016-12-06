@@ -38,6 +38,8 @@ function displayGame() {
 }
 
 function setCellValue(card, value) {
+	$("#video").empty();
+
 	var row, col;
 	var cards = $(".card");
 	for(var i=0; i<cards.length; i++) {
