@@ -1,6 +1,5 @@
 var phrases = [
   'One shot one kill',
-  'Tanking',
   'Balls want to drop',
   'Every mother father son',
   'Cool shit',
@@ -31,6 +30,18 @@ var phrases = [
   'Auntie-killer',
   'Timeout timeout timeout!',
   'Jaw drop',
-  'The moral of the story is'
+  'The moral of the story is',
+  'Random rubbish',
+  'Die die',
+  'Very simple problem',
+  'Everything is good',
+  'Do good shit',
+  'Do some stupid shit',
+  'Sai lah',
+  'At some level',
+  'Slap the shit out of you',
+  'The question is',
+  'The question i have now',
+  'Woohoo!'
 ];
 
