@@ -17,7 +17,7 @@ function randomize() {
 	$(".word").each(function() {
 		do {
 			var index = randInt(phraseArrayLength);
-		} while ($.inArray(index, usedPhrases) != -1); 
+		} while ($.inArray(index, usedPhrases) != -1);
 		usedPhrases.push(index);
 
 		$(this).html(phrases[index]);
@@ -69,7 +69,8 @@ function setCellValue(card, value) {
 }
 
 function win() {
-	$("#video").append($("<iframe width='560' height='315' src='https://www.youtube.com/embed/HRerwXWTRjM?start=35&autoplay=1' frameborder='0' allowfullscreen></iframe>"));
+	var index = randInt(videos.length);
+	$("#video").append($("<iframe width='560' height='315' src='"+ videos[index]+"' frameborder='0' allowfullscreen></iframe>"));
 }
 
 function showAll() {
