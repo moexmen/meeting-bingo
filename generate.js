@@ -1,4 +1,10 @@
 var phraseArrayLength = phrases.length;
+var cells = [
+	[0, 0, 0, 0],
+	[0, 0, 0, 0],
+	[0, 0, 0, 0],
+	[0, 0, 0, 0]
+];
 
 $(function() {
 	randomize();
@@ -22,11 +28,46 @@ function displayGame() {
 	$(".card").click(function() {
 		if ($(this).hasClass("spoken")) {
 			$(this).removeClass("spoken");
+			setCellValue(this, 0);
 		}
     else {
       $(this).addClass("spoken");
+			setCellValue(this, 1);
     }
 	});
+}
+
+function setCellValue(card, value) {
+	var row, col;
+	var cards = $(".card");
+	for(var i=0; i<cards.length; i++) {
+		if (cards[i] == card) {
+			row = Math.floor(i / 4);
+			col = i % 4;
+			break;
+		}
+	}
+
+	cells[row][col] = value;
+
+	for (var i=0; i<4; i++) {
+		var rowValue = 0, colValue = 0, diagValue1 = 0, diagValue2 = 0;
+
+		for (var j=0; j<4; j++) {
+			rowValue += cells[i][j];
+			colValue += cells[j][i];
+			diagValue1 += cells[j][j];
+			diagValue2 += cells[j][3-j];
+			if(rowValue == 4 || colValue == 4 || diagValue1 == 4 || diagValue2 == 4) {
+				win();
+				return
+			}
+		}
+	}
+}
+
+function win() {
+	$("#video").append($("<iframe width='560' height='315' src='https://www.youtube.com/embed/HRerwXWTRjM?start=35&autoplay=1' frameborder='0' allowfullscreen></iframe>"));
 }
 
 function showAll() {
