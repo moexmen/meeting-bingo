@@ -69,7 +69,6 @@ function setCellValue(card, value) {
 }
 
 function win() {
-	var videos = ["https://www.youtube.com/embed/HRerwXWTRjM?start=35&autoplay=1", "https://www.youtube.com/embed/Ct6BUPvE2sM?autoplay=1"];
 	var index = randInt(videos.length);
 	$("#video").append($("<iframe width='560' height='315' src='"+ videos[index]+"' frameborder='0' allowfullscreen></iframe>"));
 }
