@@ -3,6 +3,7 @@ var phrases = [
   'At some level',
   'Auntie-killer',
   'Balls want to drop',
+  'By the power vested in me, I hereby...',
   'Can or not?',
   'Cool shit',
   'Die die',
