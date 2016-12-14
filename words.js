@@ -31,7 +31,7 @@ var phrases = [
   'The important thing in life',
   'The moral of the story is',
   'The point is',
-  'The question i have now',
+  'The question I have now',
   'The question is',
   'The thing is that',
   'There is vision and then there is reality',
