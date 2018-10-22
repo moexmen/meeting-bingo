@@ -1,0 +1,22 @@
+var phrases = [
+  'big data',
+  'blockchain',
+  'containers',
+  'bimodal',
+  'data warehouse',
+  'smart nation',
+  'AI',
+  'NoSQL',
+  'analytics',
+  'cloud',
+  'machine learning',
+  'innovation',
+  'microservices',
+  'neural network',
+  'NLP',
+  'new technologies',
+  'cutting edge',
+  'cryptocurrencies',
+  'agile',
+  'API'
+];
