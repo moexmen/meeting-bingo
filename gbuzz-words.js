@@ -1,0 +1,22 @@
+var phrases = [
+  'big data',
+  'blockchain',
+  'bimodal',
+  'smart nation',
+  'analytics',
+  'cloud',
+  'machine learning',
+  'innovation',
+  'new technologies',
+  'agile',
+  'API',
+  'digitisation',
+  'security',
+  'compliance',
+  'best practices',
+  'digital transformation',
+  'government technology stack',
+  'future-ready',
+  'future-proof',
+  'cyber threats'
+];
