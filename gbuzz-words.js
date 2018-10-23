@@ -15,8 +15,14 @@ var phrases = [
   'compliance',
   'best practices',
   'digital transformation',
-  'government technology stack',
+  'technology stack',
   'future-ready',
   'future-proof',
-  'cyber threats'
+  'cyber threats',
+  'user-centric',
+  'as-a-service',
+  'container',
+  'automate',
+  'audit and deviations',
+  'assurance'
 ];
