@@ -10,7 +10,7 @@ var phrases = [
   'new technologies',
   'agile',
   'API',
-  'digitisation',
+  'digitalisation',
   'security',
   'compliance',
   'best practices',
